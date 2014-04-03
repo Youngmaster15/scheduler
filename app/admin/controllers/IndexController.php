@@ -14,5 +14,13 @@ class IndexController extends ControllerBase
         parent::initialize();
         $this->_setter($data, 'header/admin');
     }
+	
+	public function contactAction()
+    {
+        $data['title'] = ucfirst("contact");
+        $data['menu_active'] = 'contact';
+        parent::initialize();
+        $this->_setter($data, 'header/admin');
+    }
 }
 
