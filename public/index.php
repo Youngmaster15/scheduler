@@ -42,7 +42,7 @@ class Application extends Phalcon\Mvc\Application {
     }
 
     /**
-    * Register all configuration file.
+    * Register all configuration file. test for github
     *
     * @param none;
     *
