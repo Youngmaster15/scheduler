@@ -40,6 +40,24 @@ class Application extends Phalcon\Mvc\Application {
             echo $e->getMessage();
         }
     }
+	
+	/**
+    * Register all configuration file.
+    *
+    * @param none;
+    *
+    * @return none;
+    */
+    protected function _register_services() {
+        $di = new \Phalcon\DI\FactoryDefault();
+
+        $config = require_once BASE_DIR . '/config/config.php';
+        require_once BASE_DIR . '/config/loader.php';
+        require_once BASE_DIR . '/config/routes.php';
+        require_once BASE_DIR . '/config/services.php';
+
+        $this->setDI($di);
+    }
 
 }
 
