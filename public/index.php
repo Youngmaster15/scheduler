@@ -41,24 +41,6 @@ class Application extends Phalcon\Mvc\Application {
         }
     }
 
-    /**
-    * Register all configuration file. Edit this for new branch
-    *
-    * @param none;
-    *
-    * @return none;
-    */
-    protected function _register_services() {
-        $di = new \Phalcon\DI\FactoryDefault();
-
-        $config = require_once BASE_DIR . '/config/config.php';
-        require_once BASE_DIR . '/config/loader.php';
-        require_once BASE_DIR . '/config/routes.php';
-        require_once BASE_DIR . '/config/services.php';
-
-        $this->setDI($di);
-    }
-
 }
 
 $application = new Application();
